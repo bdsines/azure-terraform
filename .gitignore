@@ -1,1 +1,4 @@
 terraform
+azure/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v2.10.0_x5
+azure/.terraform/plugins/darwin_amd64/lock.json
+azure/terraform.tfvars
