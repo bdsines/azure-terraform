@@ -8,3 +8,7 @@ sandbox/azure-hdinsight/.terraform/modules/modules.json
 sandbox/azure-hdinsight/.terraform/plugins/windows_amd64/lock.json
 modules/azure-hdinsight/.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.32.1_x4.exe
 modules/azure-hdinsight/.terraform/plugins/windows_amd64/lock.json
+terraform
+azure/.terraform/plugins/darwin_amd64/terraform-provider-azurerm_v2.10.0_x5
+azure/.terraform/plugins/darwin_amd64/lock.json
+azure/terraform.tfvars
