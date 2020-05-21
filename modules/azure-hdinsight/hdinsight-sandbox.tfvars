@@ -1,0 +1,12 @@
+#Use for local execution/testing only
+hdinsight_resource_group="lab-architects-sandbox-bharath"
+hdinsight_storage_account_name="labarchitectssandboxbhar"
+hdinsight_storage_container_name="lab-hdinsight-kafka-02-20200519"
+hdinsight_cluster_name="lab-hdinsight-kafka-02"
+hdinsight_adminuser="admin"
+hdinsight_adminpassword="wearePackers123!"
+hdinsight_gateway_adminuser="gatewayadmin"
+hdinsight_gateway_adminpassword="wearePackers123!"
+hdinsight_vnet_name="lab-bd-sandbox-vnet"
+hdinsight_subnet_name="snet-hdinsights"
+hdinsight-managed-identity-name=""

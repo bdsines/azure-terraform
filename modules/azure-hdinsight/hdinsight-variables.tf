@@ -3,6 +3,9 @@ variable "location" {
   type    = string
   default = "centralus"
 }
+variable "hdinsight-managed-identity-name" {
+    type = string     
+}
 variable "hdinsight_resource_group" {
     type = string  
 }
@@ -10,6 +13,9 @@ variable "hdinsight_storage_account_name" {
     type = string  
 }
 variable "hdinsight_storage_container_name" {
+    type = string  
+}
+variable "hdinsight_storage_file_system_id" {
     type = string  
 }
 variable "hdinsight_cluster_name" {

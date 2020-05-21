@@ -1,0 +1,10 @@
+terraform.exe
+azure-hdinsight/.terraform/plugins/windows_amd64/lock.json
+azure-hdinsight/.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.32.1_x4.exe
+.terraform/modules/modules.json
+.terraform/plugins/windows_amd64/lock.json
+.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.32.1_x4.exe
+sandbox/azure-hdinsight/.terraform/modules/modules.json
+sandbox/azure-hdinsight/.terraform/plugins/windows_amd64/lock.json
+modules/azure-hdinsight/.terraform/plugins/windows_amd64/terraform-provider-azurerm_v1.32.1_x4.exe
+modules/azure-hdinsight/.terraform/plugins/windows_amd64/lock.json
