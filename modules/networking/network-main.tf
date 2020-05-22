@@ -31,7 +31,11 @@ resource azurerm_subnet "subnet" {
   resource_group_name  = data.azurerm_resource_group.vnet.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefix       = var.subnet_prefixes[count.index]
-  service_endpoints =["Microsoft.Storage","Microsoft.AzureActiveDirectory"]
+  service_endpoints =["Microsoft.Storage"]
+  timeouts {
+    create = "10m"
+    delete = "30m"
+  }
 }
 
 data azurerm_subnet "import" {
