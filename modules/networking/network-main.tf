@@ -31,6 +31,7 @@ resource azurerm_subnet "subnet" {
   resource_group_name  = data.azurerm_resource_group.vnet.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefix       = var.subnet_prefixes[count.index]
+  service_endpoints =["Microsoft.Storage","Microsoft.AzureActiveDirectory"]
 }
 
 data azurerm_subnet "import" {
@@ -47,7 +48,7 @@ resource azurerm_subnet_network_security_group_association "vnet" {
   for_each                  = azurerm_network_security_group.vnetnsg
   # for_each                  = var.nsg_ids
   subnet_id                 = data.azurerm_subnet.import[each.key].id
-  network_security_group_id = each.value
+  network_security_group_id = each.value.id
 
   depends_on = [data.azurerm_subnet.import]
 }
