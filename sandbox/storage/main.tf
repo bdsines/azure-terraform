@@ -18,9 +18,9 @@ variable local_resource_group_name {
 module "storage" {
   source = "../../modules/storage"
   vnet_name="vnet1"
-  subnet_name="vnet1"
+  subnet_name="subnet1"
   location = "westus"
   resource_group_name="${var.local_resource_group_name}"
-  storage_account_name=  "storage_account"
+  storage_account_name=  "bdstorageacct123"
   tags = { ENV = "test"}
 }

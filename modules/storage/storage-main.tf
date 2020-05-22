@@ -1,6 +1,6 @@
 data azurerm_resource_group "storagerg" {
   name = var.resource_group_name
-  location=var.location
+  #location=var.location
 }
 data azurerm_subnet "storagesubnet" {
   resource_group_name  = data.azurerm_resource_group.storagerg.name
