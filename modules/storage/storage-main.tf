@@ -4,7 +4,7 @@ data azurerm_resource_group "storagerg" {
 }
 data azurerm_subnet "storagesubnet" {
   resource_group_name  = azurerm_resource_group.storagerg.name
-  virtual_network_name = name = var.vnet_name
+  virtual_network_name  = var.vnet_name
   name = var.subnet_name
 }
 

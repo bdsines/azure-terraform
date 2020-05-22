@@ -7,10 +7,16 @@ variable "resource_group_name" {
   description = "Name of the resource group to be imported."
 }
 
+variable "vnet_name" {
+  description = "Name of the vnet."
+  default     = "vnet1"
+}
+
 variable "subnet_name" {
   description = "A list of public subnets inside the vNet."
   default     = "subnet1"
 }
+
 
 variable "storage_account_name" {
   description = "Storage Account name"
