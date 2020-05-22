@@ -1,3 +1,7 @@
+variable "location" {
+  description = "Region of the vnet/rg"
+  default     = "westus"
+}
 variable "vnet_name" {
   description = "Name of the vnet to create"
   default     = "acctvnet"
