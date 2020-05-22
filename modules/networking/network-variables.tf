@@ -33,11 +33,11 @@ variable "subnet_names" {
   default     = ["subnet1", "subnet2", "subnet3"]
 }
 
-variable "nsg_ids" {
+variable "subnet_security_group_names" {
   description = "A map of subnet name to Network Security Group IDs"
   type        = map(string)
 
-  default = {
+  default = {"subnet1":"nsg1","subnet2":"nsg2","subnet3":"nsg3"
   }
 }
 

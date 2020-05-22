@@ -1,9 +1,9 @@
 #Azure Generic vNet Module
-provider "azurerm" {
- version = 2.10
- features {}
+# provider "azurerm" {
+#  version = 2.10
+#  features {}
 
-}
+# }
 # resource "azurerm_resource_group" "vnet" {
 #   name     = var.resource_group_name
 #   location = var.location
@@ -11,7 +11,12 @@ provider "azurerm" {
 data azurerm_resource_group "vnet" {
   name = var.resource_group_name
 }
-
+resource "azurerm_network_security_group" "vnetnsg" {
+  for_each                  = var.subnet_security_group_names
+  name                = each.key
+  location            = var.location
+  resource_group_name = data.azurerm_resource_group.vnet.name
+}
 resource azurerm_virtual_network "vnet" {
   name                = var.vnet_name
   resource_group_name = data.azurerm_resource_group.vnet.name
@@ -29,7 +34,7 @@ resource azurerm_subnet "subnet" {
 }
 
 data azurerm_subnet "import" {
-  for_each             = var.nsg_ids
+  for_each             = var.subnet_security_group_names
   name                 = each.key
   resource_group_name  = data.azurerm_resource_group.vnet.name
   virtual_network_name = azurerm_virtual_network.vnet.name
@@ -38,7 +43,9 @@ data azurerm_subnet "import" {
 }
 
 resource azurerm_subnet_network_security_group_association "vnet" {
-  for_each                  = var.nsg_ids
+  
+  for_each                  = azurerm_network_security_group.vnetnsg
+  # for_each                  = var.nsg_ids
   subnet_id                 = data.azurerm_subnet.import[each.key].id
   network_security_group_id = each.value
 
