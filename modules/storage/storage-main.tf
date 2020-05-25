@@ -22,7 +22,7 @@ resource "azurerm_storage_account_network_rules" "test" {
   resource_group_name  = data.azurerm_resource_group.storagerg.name
   storage_account_name = azurerm_storage_account.storageaccount.name
 
-  default_action             = "Allow"
+  default_action             = "Deny"
   ip_rules                   = ["127.0.0.1"]
   virtual_network_subnet_ids = [data.azurerm_subnet.storagesubnet.id]
   bypass                     = ["Metrics"]
