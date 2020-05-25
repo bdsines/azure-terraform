@@ -23,7 +23,7 @@ module "virtual_network" {
   subnet_name=  "subnet1"
   vm_name="bdubuntu"
   nic_name="bdubuntunic"
-  admin_username="admin"
+  admin_username="bdadmin"
   admin_password="Password1234!"
   tags = { ENV = "test"}
 }
